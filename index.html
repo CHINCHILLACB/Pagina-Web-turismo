@@ -158,121 +158,109 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Hotel 1: Sonesta -->
-                <div onclick="openHotelModal('sonesta')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Sonesta Bucaramanga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">VIP / Lujo</span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Sonesta Hotel Bucaramanga</h3>
-                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.8</div>
-                            </div>
-                            <div class="flex items-center justify-between text-xs mb-3">
-                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. Parque Caracolí, Floridablanca</p>
-                                <a href="https://maps.google.com/?cid=4487906901747067066" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
-                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
-                                </a>
-                            </div>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                Máximo confort conectado al centro comercial, piscina sin fin en la terraza y vista panorámica espectacular a la ciudad.
-                            </p>
-                        </div>
-                        <div>
-                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
-                                <div>
-                                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
-                                    <span class="text-xl font-extrabold text-amber-700">~$280.000 <span class="text-xs font-normal text-slate-500">COP</span></span>
-                                </div>
-                                <button type="button" class="px-4 py-2 bg-amber-600 text-white rounded-xl text-xs font-bold hover:bg-amber-700 transition-colors shadow-sm">
-                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hotel 2: Hotel Ventura -->
-                <div onclick="openHotelModal('ventura')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Hotel Ventura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Confort Moderado</span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Hotel Ventura (Menzuly)</h3>
-                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.5</div>
-                            </div>
-                            <div class="flex items-center justify-between text-xs mb-3">
-                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Autopista Sur, Sector Menzuly</p>
-                                <a href="https://maps.google.com/?cid=3520902700387122680" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
-                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
-                                </a>
-                            </div>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                Rodeado de montañas y brisa fresca. Opción ideal para familias con piscina tipo resort, amplias zonas verdes y serenidad.
-                            </p>
-                        </div>
-                        <div>
-                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
-                               <div>
-                                   <div>
-    <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
-        <div>
-            <span class="text-xs text-slate-400 block">Precio prom / noche</span>
-            <span class="text-xl font-extrabold text-slate-800">~$295.000<span class="text-xs font-normal text-slate-500">COP</span></span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Hotel 1: Sonesta -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col justify-between">
+        <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Sonesta Bucaramanga" class="w-full h-full object-cover">
+            <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">VIP / Lujo</span>
         </div>
-        <button type="button" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors">
-            Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
-        </button>
-                    </div>
-                           </div>
-    
-                                <button type="button" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors shadow-sm">
-                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                <!-- Hotel 3: Balcones de la Colina -->
-                <div onclick="openHotelModal('balcones')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Hospedaje Balcones de la Colina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Económico</span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Balcones de la Colina</h3>
-                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.2</div>
-                            </div>
-                            <div class="flex items-center justify-between text-xs mb-3">
-                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Foscal / El Bosque</p>
-                                <a href="https://maps.google.com/?q=Balcones+de+la+Colina+Floridablanca" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
-                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
-                                </a>
-                            </div>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                Posada acogedora con estilo tradicional y ambiente hogareño, perfecta para viajeros que buscan buena ubicación a un costo moderado.
-                            </p>
-                        </div>
-                        <div>
-                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
-                                <div>
-                                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
-                                    <span class="text-xl font-extrabold text-slate-800">~$90.000 <span class="text-xs font-normal text-slate-500">COP</span></span>
-                                </div>
-                                <button type="button" class="px-4 py-2 bg-emerald-700 text-white rounded-xl text-xs font-bold hover:bg-emerald-800 transition-colors shadow-sm">
-                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-slate-900">Sonesta Hotel Bucaramanga</h3>
+                    <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.8</div>
                 </div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                    <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. Parque Caracolí, Floridablanca</p>
+                    <a href="https://maps.google.com/?cid=4487906901747067066" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                    </a>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Máximo confort conectado al centro comercial, piscina sin fin en la terraza y vista panorámica espectacular a la ciudad.
+                </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                    <span class="text-xl font-extrabold text-slate-800">~$380.000<span class="text-xs font-normal text-slate-500">COP</span></span>
+                </div>
+                <a href="https://booking.sonestabucaramanga.com/" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors inline-flex items-center">
+                    Reservar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
             </div>
         </div>
+    </div>
+
+    <!-- Hotel 2: Ventura -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col justify-between">
+        <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Hotel Ventura" class="w-full h-full object-cover">
+            <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Familiar / Descanso</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-slate-900">Hotel Ventura (Menzuly)</h3>
+                    <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.5</div>
+                </div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                    <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Autopista Sur, Sector Menzuly</p>
+                    <a href="https://maps.google.com" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                    </a>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Rodeado de montañas y brisa fresca. Opción ideal para familias con piscina tipo resort, amplias zonas verdes y serenidad.
+                </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                    <span class="text-xl font-extrabold text-slate-800">~$295.000<span class="text-xs font-normal text-slate-500">COP</span></span>
+                </div>
+                <a href="http://hotelventura.com.co/es/contacto" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors inline-flex items-center">
+                    Reservar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotel 3: Balcones de la Colina -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col justify-between">
+        <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Hospedaje Balcones de la Colina" class="w-full h-full object-cover">
+            <span class="absolute top-4 right-4 bg-slate-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Económico</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-slate-900">Balcones de la Colina</h3>
+                    <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.2</div>
+                </div>
+                <div class="flex items-center justify-between text-xs mb-3">
+                    <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Foscal / El Bosque</p>
+                    <a href="https://maps.google.com" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 font-semibold hover:underline flex items-center">
+                        <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                    </a>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Posada acogedora con estilo tradicional y ambiente hogareño, perfecta para viajeros que buscan buena ubicación a un costo moderado.
+                </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                    <span class="text-xl font-extrabold text-slate-800">~$130.000<span class="text-xs font-normal text-slate-500">COP</span></span>
+                </div>
+                <a href="https://www.booking.com/hotel/co/hospedaje-balcones-de-la-colina.es.html" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors inline-flex items-center">
+                    Reservar <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 
     <!-- SECTION 2: Ruta Gastronómica -->

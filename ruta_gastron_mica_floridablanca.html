@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Social Meta Tags -->
+    <title>Ruta Gastronómica y Familiar - Floridablanca, Santander</title>
+    <meta name="description" content="Descubre la mejor ruta gastronómica, alojamientos, itinerarios por hora y calculadora de presupuesto para visitar Floridablanca, Santander.">
+    <meta name="keywords" content="Floridablanca, Santander, Ruta Gastronomica, Obleas, Bucaramanga, Turismo Colombia, El Santisimo">
+    
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ruta Gastronómica y Familiar por Floridablanca">
+    <meta property="og:description" content="Guía interactiva, recomendaciones de restaurantes, hoteles y calculadora de presupuesto para tu viaje.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        santander: {
+                            50: '#fffbf5',
+                            100: '#f7eee3',
+                            500: '#d97706', // Terracota / Ámbar
+                            600: '#b45309',
+                            700: '#78350f',
+                            dark: '#1c1917',
+                            green: '#15803d',
+                            gold: '#ca8a04'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .font-heading { font-family: 'Playfair Display', serif; }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-yellow-500 flex items-center justify-center text-white text-xl font-bold shadow-md">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight block">Floridablanca</span>
+                        <span class="text-xs font-semibold text-amber-600 tracking-wider uppercase block">Ruta Gastronómica & Turismo</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#alojamiento" class="text-slate-600 hover:text-amber-600 transition-colors">Alojamiento</a>
+                    <a href="#gastronomia" class="text-slate-600 hover:text-amber-600 transition-colors">Ruta Gastronómica</a>
+                    <a href="#itinerario" class="text-slate-600 hover:text-amber-600 transition-colors">Ruta por Horarios</a>
+                    <a href="#diversion" class="text-slate-600 hover:text-amber-600 transition-colors">Paseos & Diversión</a>
+                    <a href="#calculador" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-amber-200">
+                        <i class="fa-solid fa-calculator mr-2"></i>Calcular Presupuesto
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-amber-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#alojamiento" class="block text-slate-700 hover:text-amber-600 py-2">Alojamiento</a>
+            <a href="#gastronomia" class="block text-slate-700 hover:text-amber-600 py-2">Ruta Gastronómica</a>
+            <a href="#itinerario" class="block text-slate-700 hover:text-amber-600 py-2">Ruta por Horarios</a>
+            <a href="#diversion" class="block text-slate-700 hover:text-amber-600 py-2">Paseos & Diversión</a>
+            <a href="#calculador" class="block bg-amber-600 text-white text-center py-2.5 rounded-xl font-semibold">Calcular Presupuesto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80" alt="Floridablanca Santander" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center text-white py-16">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-amber-500/20 backdrop-blur-md text-amber-300 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 border border-amber-400/30">
+                <i class="fa-solid fa-location-dot mr-2"></i>Capital Mundial de la Oblea • Santander, Colombia
+            </span>
+            <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Ruta Gastronómica & <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-200">Familiar por Floridablanca</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Descubre los mejores sabores de la región: desde desayunos artesanales hasta cenas de autor, alojamientos confortables y la mejor diversión nocturna para la familia.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#gastronomia" class="w-full sm:w-auto px-8 py-4 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-utensils mr-2"></i>Explorar Sabores
+                </a>
+                <a href="#calculador" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 transition-all duration-300">
+                    <i class="fa-solid fa-calculator mr-2"></i>Planea tu Presupuesto
+                </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-16 pt-8 border-t border-white/10">
+                <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                    <div class="text-3xl font-extrabold text-amber-400">9+</div>
+                    <div class="text-xs text-slate-300 uppercase tracking-wider mt-1">Restaurantes Top</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                    <div class="text-3xl font-extrabold text-amber-400">3</div>
+                    <div class="text-xs text-slate-300 uppercase tracking-wider mt-1">Niveles de Hotel</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                    <div class="text-3xl font-extrabold text-amber-400">2 Días</div>
+                    <div class="text-xs text-slate-300 uppercase tracking-wider mt-1">Itinerario Programado</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 backdrop-blur-sm">
+                    <div class="text-3xl font-extrabold text-amber-400">100%</div>
+                    <div class="text-xs text-slate-300 uppercase tracking-wider mt-1">Familiar & Seguro</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Alojamiento Recomendado -->
+    <section id="alojamiento" class="py-20 bg-amber-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-amber-600 font-semibold uppercase tracking-wider text-sm">Donde Descansar</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Alojamiento Recomendado</p>
+                <p class="text-slate-600 mt-3">Haz clic en cualquiera de los hoteles o en "Ver detalles" para conocer servicios, dirección exacta, actividades y datos de contacto.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hotel 1: Sonesta -->
+                <div onclick="openHotelModal('sonesta')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Sonesta Bucaramanga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">VIP / Lujo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Sonesta Hotel Bucaramanga</h3>
+                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.8</div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs mb-3">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. Parque Caracolí, Floridablanca</p>
+                                <a href="https://maps.google.com/?cid=4487906901747067066" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Máximo confort conectado al centro comercial, piscina sin fin en la terraza y vista panorámica espectacular a la ciudad.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                                    <span class="text-xl font-extrabold text-amber-700">~$280.000 <span class="text-xs font-normal text-slate-500">COP</span></span>
+                                </div>
+                                <button type="button" class="px-4 py-2 bg-amber-600 text-white rounded-xl text-xs font-bold hover:bg-amber-700 transition-colors shadow-sm">
+                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel 2: Hotel Ventura -->
+                <div onclick="openHotelModal('ventura')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Hotel Ventura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Confort Moderado</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Hotel Ventura (Menzuly)</h3>
+                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.5</div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs mb-3">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Autopista Sur, Sector Menzuly</p>
+                                <a href="https://maps.google.com/?cid=3520902700387122680" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Rodeado de montañas y brisa fresca. Opción ideal para familias con piscina tipo resort, amplias zonas verdes y serenidad.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                                    <span class="text-xl font-extrabold text-slate-800">~$190.000 <span class="text-xs font-normal text-slate-500">COP</span></span>
+                                </div>
+                                <button type="button" class="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors shadow-sm">
+                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel 3: Balcones de la Colina -->
+                <div onclick="openHotelModal('balcones')" class="bg-white rounded-2xl overflow-hidden shadow-md card-hover border border-slate-100 flex flex-col cursor-pointer group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Hospedaje Balcones de la Colina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Económico</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Balcones de la Colina</h3>
+                                <div class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i> 4.2</div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs mb-3">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Foscal / El Bosque</p>
+                                <a href="https://maps.google.com/?q=Balcones+de+la+Colina+Floridablanca" target="_blank" onclick="event.stopPropagation();" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Ver mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Posada acogedora con estilo tradicional y ambiente hogareño, perfecta para viajeros que buscan buena ubicación a un costo moderado.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Precio prom / noche</span>
+                                    <span class="text-xl font-extrabold text-slate-800">~$90.000 <span class="text-xs font-normal text-slate-500">COP</span></span>
+                                </div>
+                                <button type="button" class="px-4 py-2 bg-emerald-700 text-white rounded-xl text-xs font-bold hover:bg-emerald-800 transition-colors shadow-sm">
+                                    Ver detalles <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Ruta Gastronómica -->
+    <section id="gastronomia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-amber-600 font-semibold uppercase tracking-wider text-sm">Experiencia Culinaria</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Ruta Gastronómica</p>
+                <p class="text-slate-600 mt-3">3 restaurantes seleccionados para cada tiempo de comida. ¡Sabores auténticos e inolvidables!</p>
+            </div>
+
+            <!-- Tabs Gastronomía -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1.5 bg-slate-100 rounded-2xl border border-slate-200">
+                    <button onclick="switchTab('desayuno')" id="tab-desayuno" class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 bg-white text-amber-600 shadow-sm">
+                        <i class="fa-solid fa-mug-hot mr-2"></i>Desayunos
+                    </button>
+                    <button onclick="switchTab('almuerzo')" id="tab-almuerzo" class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-utensils mr-2"></i>Almuerzos
+                    </button>
+                    <button onclick="switchTab('cena')" id="tab-cena" class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900">
+                        <i class="fa-solid fa-wine-glass mr-2"></i>Cenas
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content DESAYUNO -->
+            <div id="content-desayuno" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Desayuno 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80" alt="Amapola Coffee" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Cafés & Brunch</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Amapola Coffee & Brunch</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Cañaveral, Floridablanca</p>
+                                <a href="https://maps.google.com/?cid=4604334931225438783" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Brunch moderno con tostadas francesas, huevos pochados, pancakes esponjosos y café de especialidad santandereano.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$18.000 - $35.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desayuno 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Amasa Panadería" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Auténtico & Tradicional</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Amasa Panadería Artesanal</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Cañaveral</p>
+                                <a href="https://maps.google.com/?q=Amasa+Panaderia+Floridablanca" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Exquisitos caldos típicos con huevo y costilla, arepa santandereana de maíz pelao y panes de masa madre recién horneados.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$15.000 - $30.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desayuno 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Casa Brioche" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Clásico Familiar</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Casa Brioche Cañaveral</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. La Florida Area</p>
+                                <a href="https://maps.google.com/?q=Casa+Brioche+Canaveral+Floridablanca" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Desayunos completos con calentados colombianos, waffles, jugos naturales y panadería fina de la casa.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$12.000 - $25.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content ALMUERZO -->
+            <div id="content-almuerzo" class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden">
+                <!-- Almuerzo 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Mercagan Cañaveral" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Parrilla & Carnes</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Mercagán Cañaveral</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Autopista Floridablanca</p>
+                                <a href="https://maps.google.com/?cid=9809769691851788319" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Los mejores cortes de carne madurada a la parrilla, acompañados de yuca frita, guacamole y arepa santandereana.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$35.000 - $70.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Almuerzo 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="La Cuesta Food Court" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Internacional & Variedad</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Mercado Gastronómico Caracolí</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. Parque Caracolí</p>
+                                <a href="https://maps.google.com/?cid=4487906901747067066" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Ambiente moderno con opciones de comida de autor, pastas, hamburguesas gourmet y cocina asiática.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$30.000 - $65.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Almuerzo 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Tony Cañaveral" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Típico Santandereano</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Restaurante Tony Cañaveral</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Cañaveral</p>
+                                <a href="https://maps.google.com/?q=Tony+Canaveral+Floridablanca" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Ícono gastronómico regional: especialistas en cabrito asado, pepitoria, carne oreada y sobrebarriga en salsa.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$28.000 - $60.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content CENA -->
+            <div id="content-cena" class="grid grid-cols-1 md:grid-cols-3 gap-8 hidden">
+                <!-- Cena 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Il Piccolo Giardino" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Italiano & Romántico</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Il Piccolo Giardino</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Zona Residencial Floridablanca</p>
+                                <a href="https://maps.google.com/?q=Il+Piccolo+Giardino+Floridablanca" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Pizzas artesanales en horno de piedra, sangrías, pastas frescas y ambiente rodeado de jardines iluminados.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$25.000 - $55.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cena 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Terraza Valhalla" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Vista Panorámica & Bar</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Terraza Valhalla Bar</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Miradores Floridablanca</p>
+                                <a href="https://maps.google.com/?q=Mirador+Valhalla+Floridablanca" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Hamburguesas de autor, picadas mixtas, coctelería artesanal y una vista nocturna inigualable del área metropolitana.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$30.000 - $65.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cena 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 card-hover flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Parque Caracolí" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">Variedad Familiar</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1">Plazoleta Gourmet Caracolí</h3>
+                            <div class="flex items-center justify-between text-xs my-2">
+                                <p class="text-slate-500"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> C.C. Parque Caracolí</p>
+                                <a href="https://maps.google.com/?cid=4487906901747067066" target="_blank" class="text-amber-600 hover:text-amber-700 font-semibold underline flex items-center">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i>Mapa
+                                </a>
+                            </div>
+                            <p class="text-slate-600 text-sm mb-4">Múltiples opciones gastronómicas: sushi, tacos, comida mexicana, parrilla y postres en un ambiente cómodo.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+                            <span class="text-xs text-slate-500">Rango p/p</span>
+                            <span class="font-extrabold text-amber-700">$20.000 - $50.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Ruta Cronológica Paso a Paso por Horarios -->
+    <section id="itinerario" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full uppercase tracking-wider">Cronograma de Viaje Paso a Paso</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Ruta Horario por Horario</h2>
+                <p class="text-slate-600 mt-2">Personaliza el número de personas para calcular el presupuesto proyectado de la ruta sugerida hora por hora.</p>
+                
+                <!-- Selector de Personas para Itinerario -->
+                <div class="mt-6 inline-flex items-center space-x-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-200">
+                    <span class="text-xs font-bold uppercase text-slate-700"><i class="fa-solid fa-users text-amber-600 mr-1"></i> Viajeros:</span>
+                    <button onclick="updateItineraryGroup(-1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-amber-100 text-amber-700 font-bold transition-colors">-</button>
+                    <span id="itin-group-count" class="font-extrabold text-amber-700 text-lg min-w-[3rem] text-center">2 Pnas</span>
+                    <button onclick="updateItineraryGroup(1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-amber-100 text-amber-700 font-bold transition-colors">+</button>
+                </div>
+            </div>
+
+            <!-- Tabs Día 1 y Día 2 -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                    <button onclick="switchItinDay(1)" id="tab-itin-1" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-amber-600 text-white shadow-sm transition-all">
+                        <i class="fa-solid fa-calendar-day mr-2"></i>Día 1: Tradición y Miradores
+                    </button>
+                    <button onclick="switchItinDay(2)" id="tab-itin-2" class="px-6 py-2.5 rounded-xl font-bold text-sm text-slate-600 hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-water mr-2"></i>Día 2: Diversión y Aventura
+                    </button>
+                </div>
+            </div>
+
+            <!-- TIMELINE DÍA 1 -->
+            <div id="itin-day-1" class="relative border-l-4 border-amber-500 ml-4 sm:ml-32 space-y-8">
+                <!-- Evento 1 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>08:00 AM - 09:30 AM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-1-1">$50.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">1. Desayuno Típico en Amasa Panadería</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Cañaveral</p>
+                        <p class="text-slate-600 text-sm">Comienza la jornada cargado de energía con un auténtico caldo de costilla o pisa, arepa santandereana de maíz pelao con queso y café caliente de la región.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>10:00 AM - 12:30 PM</span>
+                            <span class="text-xs bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0">Gratuito (Ingreso Libre)</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">2. Caminata Cultural Parque Principal San Juan Nepomuceno</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Centro Histórico de Floridablanca</p>
+                        <p class="text-slate-600 text-sm">Recorrido familiar por la plaza colonial, foto en la parroquia principal y descanso bajo la brisa y frondosos árboles característicos del centro.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>01:00 PM - 03:00 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-1-3">$90.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">3. Almuerzo Auténtico en Restaurante Tony</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Cañaveral</p>
+                        <p class="text-slate-600 text-sm">Prueba platos insignias de Santander: pepitoria, cabrito asado, carne oreada artesanal con yuca al vapor y limonada de panela bien fría.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 4 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-mountain text-sm"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>03:30 PM - 06:00 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-1-4">$60.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">4. Teleférico y Visita al Ecoparque Cerro del Santísimo</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Cerro del Santísimo</p>
+                        <p class="text-slate-600 text-sm">Ascenso en teleférico panorámico contemplando los cerros. Disfruta de senderos ecológicos, mirador principal y fotografías en el monumento de 37m.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 5 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-pizza-slice"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>07:00 PM - 08:30 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-1-5">$80.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">5. Cena Nocturna en Il Piccolo Giardino</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Sector Residencial Floridablanca</p>
+                        <p class="text-slate-600 text-sm">Disfruta una velada tranquila rodeado de jardines iluminados degustando pizzas artesanales en horno de piedra y sangría de la casa.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 6 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>09:00 PM - 10:00 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-1-6">$20.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">6. Postre Nocturno en la Calle de las Obleas</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Casco Antiguo</p>
+                        <p class="text-slate-600 text-sm">Cierre perfecto de la noche probando la oblea tradicional con arequipe, queso, crema de leche y mermelada de mora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIMELINE DÍA 2 -->
+            <div id="itin-day-2" class="relative border-l-4 border-amber-500 ml-4 sm:ml-32 space-y-8 hidden">
+                <!-- Evento 1 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>08:30 AM - 09:30 AM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-2-1">$55.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">1. Brunch Moderno en Amapola Coffee</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Cañaveral</p>
+                        <p class="text-slate-600 text-sm">Pancakes esponjosos, tostadas con aguacate y huevos pochados acompañados de cafés especiales origen Santander.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>10:00 AM - 01:30 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-2-2">$50.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">2. Mañana Acuática en Acualago</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Anillo Vial Floridablanca</p>
+                        <p class="text-slate-600 text-sm">Diversión en la piscina de olas, toboganes familiares y recorrido en flotadores sobre el río lento del parque.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>02:00 PM - 04:00 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-2-3">$110.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">3. Almuerzo de Parrilla en Mercagán</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Autopista Floridablanca</p>
+                        <p class="text-slate-600 text-sm">Cortes de carne madurada a la brasa, chinchurria crocante, yuca frita y arepa de chocolo.</p>
+                    </div>
+                </div>
+
+                <!-- Evento 4 -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[1.35rem] top-1 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-md">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-amber-300 transition-all">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase"><i class="fa-regular fa-clock mr-1"></i>05:00 PM - 08:30 PM</span>
+                            <span class="text-xs bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-bold mt-1 sm:mt-0" id="cost-itin-2-4">$90.000 COP total grupo</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">4. Atardecer y Cena Panorámica en Mesa de Ruitoque</h4>
+                        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Mirador Ruitoque</p>
+                        <p class="text-slate-600 text-sm">Avistamiento del atardecer con brisa de montaña en los miradores y cena estilo picada en Terraza Valhalla con cócteles y hamburguesas artesanales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Calculador Interactivo de Presupuesto -->
+    <section id="calculador" class="py-20 bg-amber-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-amber-100 overflow-hidden p-6 sm:p-10">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Herramienta Interactiva</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Calculador de Presupuesto</h2>
+                    <p class="text-slate-600 text-sm mt-2">Estima el valor aproximado de tu estadía por día según las preferencias de tu familia.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Formulario de Configuración -->
+                    <div class="space-y-6">
+                        <!-- Selección de Estilo de Viaje -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-2">1. Selecciona tu Nivel de Presupuesto:</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" onclick="setBudgetTier('economic')" id="btn-economic" class="tier-btn p-3 text-center border rounded-xl border-amber-500 bg-amber-50 text-amber-800 font-bold text-xs transition-all">
+                                    <i class="fa-solid fa-piggy-bank text-base block mb-1"></i>
+                                    Económico
+                                </button>
+                                <button type="button" onclick="setBudgetTier('medium')" id="btn-medium" class="tier-btn p-3 text-center border rounded-xl border-slate-200 bg-white text-slate-600 font-bold text-xs hover:border-amber-400 transition-all">
+                                    <i class="fa-solid fa-coins text-base block mb-1"></i>
+                                    Moderado
+                                </button>
+                                <button type="button" onclick="setBudgetTier('vip')" id="btn-vip" class="tier-btn p-3 text-center border rounded-xl border-slate-200 bg-white text-slate-600 font-bold text-xs hover:border-amber-400 transition-all">
+                                    <i class="fa-solid fa-crown text-base block mb-1"></i>
+                                    VIP / Lujo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Número de Personas -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-xs font-bold uppercase text-slate-700">2. Número de Personas:</label>
+                                <span id="val-personas" class="text-amber-700 font-extrabold text-sm">2 Personas</span>
+                            </div>
+                            <input type="range" id="input-personas" min="1" max="8" value="2" oninput="calculateTotal()" class="w-full accent-amber-600 cursor-pointer h-2 bg-slate-200 rounded-lg">
+                        </div>
+
+                        <!-- Número de Días -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-xs font-bold uppercase text-slate-700">3. Días de Estadía:</label>
+                                <span id="val-dias" class="text-amber-700 font-extrabold text-sm">2 Días / 1 Noche</span>
+                            </div>
+                            <input type="range" id="input-dias" min="1" max="7" value="2" oninput="calculateTotal()" class="w-full accent-amber-600 cursor-pointer h-2 bg-slate-200 rounded-lg">
+                        </div>
+
+                        <!-- Inclusiones Adicionales -->
+                        <div class="space-y-2 pt-2">
+                            <label class="block text-xs font-bold uppercase text-slate-700">4. Experiencias Extras:</label>
+                            <label class="flex items-center text-sm text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="chk-santisimo" checked onchange="calculateTotal()" class="rounded border-slate-300 text-amber-600 focus:ring-amber-500 mr-2 h-4 w-4">
+                                Entrada Cerro del Santísimo + Teleférico
+                            </label>
+                            <label class="flex items-center text-sm text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="chk-obleas" checked onchange="calculateTotal()" class="rounded border-slate-300 text-amber-600 focus:ring-amber-500 mr-2 h-4 w-4">
+                                Tour de Obleas Tradicionales
+                            </label>
+                            <label class="flex items-center text-sm text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="chk-acualago" onchange="calculateTotal()" class="rounded border-slate-300 text-amber-600 focus:ring-amber-500 mr-2 h-4 w-4">
+                                Día en Acualago Parque Acuático
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Resultado del Cómputo -->
+                    <div class="bg-slate-900 rounded-2xl p-6 sm:p-8 text-white flex flex-col justify-between border border-slate-800 shadow-inner">
+                        <div>
+                            <span class="text-xs uppercase text-amber-400 font-bold tracking-wider block mb-1">Presupuesto Estimado Total</span>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-amber-400 my-2" id="total-estimado">
+                                $0 COP
+                            </div>
+                            <p class="text-xs text-slate-400 mb-6">Incluye alojamiento, 3 comidas diarias (Desayuno, Almuerzo, Cena) y atracciones seleccionadas.</p>
+
+                            <!-- Desglose -->
+                            <div class="space-y-2 text-xs border-t border-slate-800 pt-4">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Alojamiento:</span>
+                                    <span font-semibold id="costo-alojamiento">$0 COP</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Alimentación (3 comidas/día):</span>
+                                    <span font-semibold id="costo-comidas">$0 COP</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Paseos y Entradas:</span>
+                                    <span font-semibold id="costo-paseos">$0 COP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t border-slate-800/80">
+                            <button onclick="copiarPresupuesto()" class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl text-sm transition-all shadow-md">
+                                <i class="fa-solid fa-copy mr-2"></i>Copiar Resumen de Presupuesto
+                            </button>
+                            <p id="msg-copiado" class="text-center text-xs text-emerald-400 mt-2 hidden"><i class="fa-solid fa-check mr-1"></i>¡Copiado al portapapeles!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Footer Informativo -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-sm">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">Floridablanca Gastronómica</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Guía turística interactiva de Floridablanca, Santander, Colombia. Diseñada para orientar a familias y visitantes en su ruta de sabores, descanso y atracciones emblemáticas.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-3 uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#alojamiento" class="hover:text-amber-400 transition-colors">Hoteles Recomendados</a></li>
+                        <li><a href="#gastronomia" class="hover:text-amber-400 transition-colors">Ruta de Restaurantes</a></li>
+                        <li><a href="#diversion" class="hover:text-amber-400 transition-colors">El Santísimo y Obleas</a></li>
+                        <li><a href="#calculador" class="hover:text-amber-400 transition-colors">Calculadora de Viaje</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold mb-3 uppercase tracking-wider">Santander, Colombia</h4>
+                    <p class="text-xs text-slate-400 mb-2"><i class="fa-solid fa-sun text-amber-500 mr-2"></i> Clima cálido templado (~23°C)</p>
+                    <p class="text-xs text-slate-400 mb-2"><i class="fa-solid fa-car text-amber-500 mr-2"></i> A solo 20 min de Bucaramanga</p>
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-heart text-amber-500 mr-2"></i> Tierra de dulce, sabor y tradición</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-900 pt-6 text-center text-xs text-slate-600">
+                &copy; 2026 Ruta Gastronómica de Floridablanca. Guía turística informativa independiente.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLES DE HOTEL -->
+    <div id="hotel-modal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 flex flex-col relative animate-fade-in">
+            <!-- Botón Cerrar -->
+            <button onclick="closeHotelModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 flex items-center justify-center transition-all">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Encabezado con imagen -->
+            <div class="relative h-56 sm:h-64">
+                <img id="modal-hotel-img" src="" alt="Hotel" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 text-white">
+                    <span id="modal-hotel-badge" class="px-3 py-1 bg-amber-600 text-white text-xs font-bold rounded-full uppercase tracking-wider"></span>
+                    <h3 id="modal-hotel-title" class="text-2xl sm:text-3xl font-extrabold mt-1"></h3>
+                    <p id="modal-hotel-location" class="text-xs text-slate-200 mt-0.5"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i></p>
+                </div>
+            </div>
+
+            <!-- Contenido Modal -->
+            <div class="p-6 sm:p-8 space-y-6">
+                <!-- Dirección Exacta -->
+                <div class="bg-amber-50/80 rounded-2xl p-4 border border-amber-100/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase text-amber-800 tracking-wider mb-1"><i class="fa-solid fa-map-location-dot mr-2"></i>Dirección Exacta</h4>
+                        <p id="modal-hotel-address" class="text-sm font-medium text-slate-800"></p>
+                    </div>
+                    <a id="modal-hotel-map-btn" href="#" target="_blank" class="inline-flex items-center justify-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl shadow-sm transition-colors whitespace-nowrap">
+                        <i class="fa-solid fa-map-location-dot mr-1.5"></i> Abrir Mapa
+                    </a>
+                </div>
+
+                <!-- Servicios -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-3"><i class="fa-solid fa-concierge-bell mr-2 text-amber-600"></i>Servicios Incluidos & Amenities</h4>
+                    <div id="modal-hotel-services" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <!-- Actividades y Amenidades -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2"><i class="fa-solid fa-person-swimming mr-2 text-amber-600"></i>Actividades que puedes realizar</h4>
+                    <p id="modal-hotel-activities" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Políticas y Reservación -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2"><i class="fa-solid fa-calendar-check mr-2 text-amber-600"></i>Reservaciones & Antelación Recomendada</h4>
+                    <p id="modal-hotel-reservations" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Números de Contacto -->
+                <div class="border-t border-slate-100 pt-5">
+                    <h4 class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-3"><i class="fa-solid fa-phone mr-2 text-amber-600"></i>Contactos Directos & Reservas</h4>
+                    <div class="space-y-3 text-sm text-slate-700">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-phone text-amber-600 w-6"></i>
+                            <a id="modal-hotel-phone-link" href="#" class="font-medium text-slate-800 hover:text-amber-600 hover:underline transition-colors flex items-center">
+                                <span id="modal-hotel-phone"></span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2 text-slate-400"></i>
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 w-6 text-base"></i>
+                            <a id="modal-hotel-whatsapp-link" href="#" target="_blank" class="font-medium text-emerald-700 hover:text-emerald-800 hover:underline transition-colors flex items-center">
+                                <span id="modal-hotel-whatsapp"></span>
+                                <span class="ml-2 text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">Iniciar chat <i class="fa-solid fa-paper-plane text-[10px] ml-1"></i></span>
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-envelope text-slate-500 w-6"></i>
+                            <a id="modal-hotel-email-link" href="#" class="font-medium text-slate-800 hover:text-amber-600 hover:underline transition-colors flex items-center">
+                                <span id="modal-hotel-email"></span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-2 text-slate-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button onclick="closeHotelModal()" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm transition-colors">
+                        Cerrar Ficha Informativa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+    // Datos completos de cada hotel para la ventana modal
+    const hotelData = {
+        sonesta: {
+            title: "Sonesta Hotel Bucaramanga",
+            badge: "VIP / Lujo",
+            location: "C.C. Parque Caracolí, Floridablanca",
+            img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+            address: "Carrera 27 No. 29-145, C.C. Parque Caracolí, Floridablanca, Santander",
+            mapUrl: "https://maps.google.com/?cid=4487906901747067066",
+            services: ["Piscina en Terraza con Vista", "Restaurante Gourmet", "Spa & Wellness", "Gimnasio Equipado", "Wi-Fi de alta velocidad", "Parqueadero Privado", "Conexión directa a Centro Comercial"],
+            activities: "Disfruta de tardes de cóctel en la terraza panoramica con piscina, acceso directo al mall gastronómico Parque Caracolí, relajación en el spa y recorridos ejecutivos o de descanso.",
+            reservations: "Disponibles 24/7. Se recomienda reservar con 1 o 2 semanas de antelación para temporadas altas.",
+            phone: "+576076186818",
+            phoneDisplay: "+57 (607) 6186818",
+            whatsapp: "573176527409",
+            whatsappDisplay: "+57 317 6527409",
+            email: "reservas.sonestabucaramanga@ghlhoteles.com"
+        },
+        ventura: {
+            title: "Hotel Ventura (Menzuly)",
+            badge: "Confort Moderado",
+            location: "Autopista Sur, Sector Menzuly",
+            img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+            address: "Kilómetro 2 + 197, Autopista Sur (Floridablanca - Piedecuesta), Floridablanca, Santander",
+            mapUrl: "https://maps.google.com/?cid=3520902700387122680",
+            services: ["Piscina Tipo Resort", "Zonas Verdes Campestres", "Parque Infantil", "Restaurante Típico e Internacional", "Salón de Eventos", "Parqueadero Gratuito"],
+            activities: "Caminatas al aire libre en extensos jardines, tardes de piscina familiar, recreación infantil y degustación de parrilladas al estilo campestre.",
+            reservations: "Atención continuada 24 horas. Ideal para grupos familiares grandes con reservación previa de 3 a 5 días.",
+            phone: "+576076390242",
+            phoneDisplay: "+57 (607) 6390242",
+            whatsapp: "573189298464",
+            whatsappDisplay: "+57 318 929 8464",
+            email: "contacto@hotelventura.com.co"
+        },
+        balcones: {
+            title: "Balcones de la Colina",
+            badge: "Económico & Acogedor",
+            location: "Sector Foscal / El Bosque",
+            img: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+            address: "Calle 153 # 22-41, Sector La Foscal / El Bosque, Floridablanca, Santander",
+            mapUrl: "https://maps.google.com/?q=Balcones+de+la+Colina+Floridablanca",
+            services: ["Wi-Fi Gratuito", "Habitaciones con Baño Privado", "TV por Cable", "Terraza Mirador", "Atención Familiar 24h", "Cercanía a Zonas Médicas y Gastronómicas"],
+            activities: "Descanso tranquilo y acogedor, avistamiento desde la terraza panorámica hacia los Cerros Orientales y caminatas cortas a panaderías tradicionales.",
+            reservations: "Check-in flexible desde las 2:00 PM. Se aconseja reservar con 2 días de anticipación.",
+            phone: "+576076384000",
+            phoneDisplay: "+57 (607) 638 4000",
+            whatsapp: "573164375923",
+            whatsappDisplay: "+57 316 437 5923",
+            email: "reservas@balconesdelacolina.com"
+        }
+    };
+
+    // Función para abrir la ventana modal del hotel
+    function openHotelModal(hotelKey) {
+        const hotel = hotelData[hotelKey];
+        if (!hotel) return;
+
+        document.getElementById('modal-hotel-img').src = hotel.img;
+        document.getElementById('modal-hotel-badge').innerText = hotel.badge;
+        document.getElementById('modal-hotel-title').innerText = hotel.title;
+        document.getElementById('modal-hotel-location').innerHTML = `<i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> ${hotel.location}`;
+        document.getElementById('modal-hotel-address').innerText = hotel.address;
+        
+        const mapBtn = document.getElementById('modal-hotel-map-btn');
+        if (mapBtn) mapBtn.href = hotel.mapUrl;
+
+        // Renderizar chips de servicios
+        const servicesContainer = document.getElementById('modal-hotel-services');
+        servicesContainer.innerHTML = hotel.services.map(s => 
+            `<span class="px-3 py-1 bg-amber-100 text-amber-800 font-semibold text-xs rounded-lg border border-amber-200"><i class="fa-solid fa-check mr-1.5 text-amber-600"></i>${s}</span>`
+        ).join('');
+
+        document.getElementById('modal-hotel-activities').innerText = hotel.activities;
+        document.getElementById('modal-hotel-reservations').innerText = hotel.reservations;
+        
+        // Asignación de teléfonos e interacciones reales
+        document.getElementById('modal-hotel-phone').innerText = hotel.phoneDisplay;
+        document.getElementById('modal-hotel-phone-link').href = `tel:${hotel.phone}`;
+
+        // WhatsApp directo con mensaje personalizado
+        const defaultMsg = encodeURIComponent(`Hola, quisiera más información sobre disponibilidad y reservas para ${hotel.title} desde la Ruta Gastronómica Floridablanca.`);
+        document.getElementById('modal-hotel-whatsapp').innerText = hotel.whatsappDisplay;
+        document.getElementById('modal-hotel-whatsapp-link').href = `https://wa.me/${hotel.whatsapp}?text=${defaultMsg}`;
+
+        // Email directo
+        document.getElementById('modal-hotel-email').innerText = hotel.email;
+        document.getElementById('modal-hotel-email-link').href = `mailto:${hotel.email}?subject=Consulta%20Reserva%20-${encodeURIComponent(hotel.title)}`;
+
+        const modal = document.getElementById('hotel-modal');
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Estado del Itinerario Hora por Hora
+    let itinGroupCount = 2;
+
+    function updateItineraryGroup(change) {
+        itinGroupCount = Math.max(1, Math.min(10, itinGroupCount + change));
+        document.getElementById('itin-group-count').innerText = `${itinGroupCount} Pnas`;
+        recalculateItineraryCosts();
+    }
+
+    function switchItinDay(day) {
+        const btn1 = document.getElementById('tab-itin-1');
+        const btn2 = document.getElementById('tab-itin-2');
+        const day1 = document.getElementById('itin-day-1');
+        const day2 = document.getElementById('itin-day-2');
+
+        if(day === 1) {
+            btn1.className = "px-6 py-2.5 rounded-xl font-bold text-sm bg-amber-600 text-white shadow-sm transition-all";
+            btn2.className = "px-6 py-2.5 rounded-xl font-bold text-sm text-slate-600 hover:text-slate-900 transition-all";
+            day1.classList.remove('hidden');
+            day2.classList.add('hidden');
+        } else {
+            btn2.className = "px-6 py-2.5 rounded-xl font-bold text-sm bg-amber-600 text-white shadow-sm transition-all";
+            btn1.className = "px-6 py-2.5 rounded-xl font-bold text-sm text-slate-600 hover:text-slate-900 transition-all";
+            day2.classList.remove('hidden');
+            day1.classList.add('hidden');
+        }
+    }
+
+    function recalculateItineraryCosts() {
+        const n = itinGroupCount;
+        // Costos unitarios
+        document.getElementById('cost-itin-1-1').innerText = formatCOP(25000 * n) + ' total grupo';
+        document.getElementById('cost-itin-1-3').innerText = formatCOP(45000 * n) + ' total grupo';
+        document.getElementById('cost-itin-1-4').innerText = formatCOP(30000 * n) + ' total grupo';
+        document.getElementById('cost-itin-1-5').innerText = formatCOP(40000 * n) + ' total grupo';
+        document.getElementById('cost-itin-1-6').innerText = formatCOP(10000 * n) + ' total grupo';
+
+        document.getElementById('cost-itin-2-1').innerText = formatCOP(27500 * n) + ' total grupo';
+        document.getElementById('cost-itin-2-2').innerText = formatCOP(25000 * n) + ' total grupo';
+        document.getElementById('cost-itin-2-3').innerText = formatCOP(55000 * n) + ' total grupo';
+        document.getElementById('cost-itin-2-4').innerText = formatCOP(45000 * n) + ' total grupo';
+    }
+
+        // Cerrar Modal de Hotel
+        function closeHotelModal() {
+            const modal = document.getElementById('hotel-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Estado Global del Calculador
+        let currentTier = 'economic';
+
+        const tierData = {
+            economic: {
+                alojamientoPersonaNoche: 90000,
+                desayuno: 18000,
+                almuerzo: 30000,
+                cena: 25000
+            },
+            medium: {
+                alojamientoPersonaNoche: 140000,
+                desayuno: 25000,
+                almuerzo: 45000,
+                cena: 40000
+            },
+            vip: {
+                alojamientoPersonaNoche: 200000,
+                desayuno: 32000,
+                almuerzo: 60000,
+                cena: 55000
+            }
+        };
+
+        // Cambiar pestañas gastronómicas
+        function switchTab(tabName) {
+            const tabs = ['desayuno', 'almuerzo', 'cena'];
+            
+            tabs.forEach(tab => {
+                const btn = document.getElementById(`tab-${tab}`);
+                const content = document.getElementById(`content-${tab}`);
+                
+                if(tab === tabName) {
+                    btn.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 bg-white text-amber-600 shadow-sm";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Selección de nivel de presupuesto
+        function setBudgetTier(tier) {
+            currentTier = tier;
+            const tiers = ['economic', 'medium', 'vip'];
+            
+            tiers.forEach(t => {
+                const btn = document.getElementById(`btn-${t}`);
+                if(t === tier) {
+                    btn.className = "tier-btn p-3 text-center border rounded-xl border-amber-500 bg-amber-50 text-amber-800 font-bold text-xs transition-all shadow-sm";
+                } else {
+                    btn.className = "tier-btn p-3 text-center border rounded-xl border-slate-200 bg-white text-slate-600 font-bold text-xs hover:border-amber-400 transition-all";
+                }
+            });
+
+            calculateTotal();
+        }
+
+        // Formateador de moneda colombiana
+        function formatCOP(amount) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        // Cálculo dinámico de total
+        function calculateTotal() {
+            const personas = parseInt(document.getElementById('input-personas').value);
+            const dias = parseInt(document.getElementById('input-dias').value);
+
+            // Actualizar etiquetas visuales
+            document.getElementById('val-personas').innerText = `${personas} ${personas === 1 ? 'Persona' : 'Personas'}`;
+            const noches = Math.max(1, dias - 1);
+            document.getElementById('val-dias').innerText = `${dias} Días / ${noches} ${noches === 1 ? 'Noche' : 'Noches'}`;
+
+            const data = tierData[currentTier];
+
+            // 1. Costo Alojamiento
+            const costoAlojamiento = data.alojamientoPersonaNoche * personas * noches;
+
+            // 2. Costo Comidas (Desayuno + Almuerzo + Cena x personas x dias)
+            const costoComidasDia = data.desayuno + data.almuerzo + data.cena;
+            const costoComidas = costoComidasDia * personas * dias;
+
+            // 3. Paseos / Extras
+            let costoPaseosPorPersona = 0;
+            if(document.getElementById('chk-santisimo').checked) {
+                costoPaseosPorPersona += 30000;
+            }
+            if(document.getElementById('chk-obleas').checked) {
+                costoPaseosPorPersona += 8000;
+            }
+            if(document.getElementById('chk-acualago').checked) {
+                costoPaseosPorPersona += 25000;
+            }
+
+            const costoPaseos = costoPaseosPorPersona * personas;
+
+            const total = costoAlojamiento + costoComidas + costoPaseos;
+
+            // Mostrar en UI
+            document.getElementById('costo-alojamiento').innerText = formatCOP(costoAlojamiento);
+            document.getElementById('costo-comidas').innerText = formatCOP(costoComidas);
+            document.getElementById('costo-paseos').innerText = formatCOP(costoPaseos);
+            document.getElementById('total-estimado').innerText = formatCOP(total);
+        }
+
+        // Copiar resumen al portapapeles
+        function copiarPresupuesto() {
+            const personas = document.getElementById('val-personas').innerText;
+            const dias = document.getElementById('val-dias').innerText;
+            const total = document.getElementById('total-estimado').innerText;
+            const tierName = currentTier === 'economic' ? 'Económico' : (currentTier === 'medium' ? 'Moderado' : 'VIP');
+
+            const text = `Ruta Gastronómica por Floridablanca, Santander 🇨🇴\n- Plan: ${tierName}\n- Grupo: ${personas}\n- Duración: ${dias}\n- Presupuesto Estimado Total: ${total}`;
+
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const msg = document.getElementById('msg-copiado');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Toggle del menú móvil
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Evento para cerrar modal al presionar ESC o dar clic por fuera
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeHotelModal();
+        });
+        document.getElementById('hotel-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeHotelModal();
+        });
+
+        // Inicializar calculador en carga de ventana
+        window.onload = function() {
+            calculateTotal();
+            recalculateItineraryCosts();
+        }
+    </script>
+</body>
+</html>

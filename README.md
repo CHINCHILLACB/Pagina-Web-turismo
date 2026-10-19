@@ -1,5 +1,4 @@
-[[documentaci_n_del_proyecto.md](https://github.com/user-attachments/files/33675643/documentaci_n_del_proyecto.md)
-](url)# 🥑 Ruta Gastronómica y Familiar por Floridablanca, Santander 🇨🇴
+# 🥑 Ruta Gastronómica y Familiar por Floridablanca, Santander 🇨🇴
 
 Una aplicación web interactiva y responsiva diseñada para guiar a turistas y familias locales a través de la rica oferta gastronómica, hotelera y cultural de **Floridablanca** (Santander, Colombia).
 
